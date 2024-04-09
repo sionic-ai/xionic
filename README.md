@@ -11,7 +11,35 @@
 그렇다면 사회구성원의 대다수가 납득할 수 있는 보편적 정의를 입증하는 방법은 무엇일지 생각해보아라
 ```
 
-test api 
+test python openai 
+
+```
+from openai import OpenAI
+
+client = OpenAI(
+    base_url = "http://sionic.chat/v1",
+    api_key = "934c4bbc-c384-4bea-af82-1450d7f8128d"
+)
+
+response = client.chat.completions.create(
+    model="xionic-1-72b-20240404",
+    messages=[
+        {"role": "system", "content": "You are an AI assistant. You will be given a task. You must generate a detailed and long answer in korean."},
+        {"role": "user", "content": "각국 의 법률에서는 정의라는 개념이 자주 등>장하며, 법령의 형성과 해석에 있어 매우 중요한 부분을 차지한다. 하지만 정의란 명>확히 규정 할 수 없는 개념이기에 해석의 논란 이 있을 수 있다. 그렇다면 사회구성원
+의 대다수가 납득할 수 있는 보편적 정의를 입 증하는 방법은 무엇일지 생각해보아라."},
+        {"role": "user", "content": "Where was it played?"}
+    ]
+)
+
+print (response)
+
+```
+
+<img width="822" alt="image" src="https://github.com/sionic-ai/xionic/assets/69115576/64f53803-750a-4fc1-8772-186e704c92fd">
+
+
+
+test curl
 
 ```
 curl --location 'http://sionic.chat/v1/chat/completions' --header 'Content-Type: application/json' --header 'X-SIONIC-API-KEY: 934c4bbc-c384-4bea-af82-1450d7f8128d' --data '{"model": "xionic-1-72b-20240404","messages": [{"role": "system", "content": "You are an AI assistant. You will be given a task. You must generate a detailed and long answer in korean."}, {"role": "user", "content": "각국 의 법률에서는 정의라는 개념이 자주 등장하며, 법령의 형성과 해석에 있어 매우 중요한 부분을 차지한다. 하지만 정의란 명확히 규정 할 수 없는 개념이기에 해석의 논란 이 있을 수 있다. 그렇다면 사회구성원의 대다수가 납득할 수 있는 보편적 정의를 입증하는 방법은 무엇일지 생각해보아라.\\nAnswer:"}]}'
