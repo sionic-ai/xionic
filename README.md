@@ -33,10 +33,6 @@ print (response)
 
 ```
 
-<img width="822" alt="image" src="https://github.com/sionic-ai/xionic/assets/69115576/64f53803-750a-4fc1-8772-186e704c92fd">
-
-
-
 test curl
 
 ```
