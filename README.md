@@ -22,7 +22,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="xionic-1-72b-20240404",
+    model="xionic-1-110b-20240429",
     messages=[
         {"role": "system", "content": "You are an AI assistant. You will be given a task. You must generate a detailed and long answer in korean."},
         {"role": "user", "content": "각국 의 법률에서는 정의라는 개념이 자주 등장하며, 법령의 형성과 해석에 있어 매우 중요한 부분을 차지한다. 하지만 정의란 명>확히 규정 할 수 없는 개념이기에 해석의 논란 이 있을 수 있다. 그렇다면 사회구성원의 대다수가 납득할 수 있는 보편적 정의를 입증하는 방법은 무엇일지 생각해보아라."}
@@ -36,14 +36,14 @@ print (response)
 test curl
 
 ```
-curl --location 'http://sionic.chat/v1/chat/completions' --header 'Content-Type: application/json' --header 'X-SIONIC-API-KEY: 934c4bbc-c384-4bea-af82-1450d7f8128d' --data '{"model": "xionic-1-72b-20240404","messages": [{"role": "system", "content": "You are an AI assistant. You will be given a task. You must generate a detailed and long answer in korean."}, {"role": "user", "content": "각국 의 법률에서는 정의라는 개념이 자주 등장하며, 법령의 형성과 해석에 있어 매우 중요한 부분을 차지한다. 하지만 정의란 명확히 규정 할 수 없는 개념이기에 해석의 논란 이 있을 수 있다. 그렇다면 사회구성원의 대다수가 납득할 수 있는 보편적 정의를 입증하는 방법은 무엇일지 생각해보아라.\\nAnswer:"}]}'
+curl --location 'http://sionic.chat/v1/chat/completions' --header 'Content-Type: application/json' --header 'X-SIONIC-API-KEY: 934c4bbc-c384-4bea-af82-1450d7f8128d' --data '{"model": "xionic-1-110b-20240429","messages": [{"role": "system", "content": "You are an AI assistant. You will be given a task. You must generate a detailed and long answer in korean."}, {"role": "user", "content": "각국 의 법률에서는 정의라는 개념이 자주 등장하며, 법령의 형성과 해석에 있어 매우 중요한 부분을 차지한다. 하지만 정의란 명확히 규정 할 수 없는 개념이기에 해석의 논란 이 있을 수 있다. 그렇다면 사회구성원의 대다수가 납득할 수 있는 보편적 정의를 입증하는 방법은 무엇일지 생각해보아라.\\nAnswer:"}]}'
 ```
 
 예시결과
 
 ```
 {"id":"cmpl-48a28de442714cc69f47013d15fbe75f","object":"chat.completion",
-"created":1712684425,"model":"xionic-1-72b-20240404",
+"created":1712684425,"model":"xionic-1-110b-20240429",
 "choices":[{"index":0,"message":{"role":"assistant","content":"정의라는 개념은 각 국가와 문화마다 다양한 해석과 이해가 있지만, 
 사회 구성원의 대부분이 납득할 수 있는 보편적 정의를 구축하기 위해서는 몇 가지 접근 방식이 있을 수 있습니다. 이를 위해서는 다음과 같은 요소들을 
 고려해야 합니다.\n\n1. 공정성과 형평성: 공정한 법과 제도를 통해 모든 구성원에게 동등한 기회와 대우를 보장하는 것이 중요한 작업입니다. 정의는 
