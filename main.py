@@ -1,7 +1,7 @@
 from openai import OpenAI
 
 client = OpenAI(
-    base_url = "http://sionic.chat/v1",
+    base_url = "https://sionic.chat/v1",
     api_key = "934c4bbc-c384-4bea-af82-1450d7f8128d"
 )
 
